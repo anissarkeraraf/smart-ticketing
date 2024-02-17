@@ -1,11 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soganda Bus Ticket</title>
+    <!-- daysy UI and Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    
+    <section class="lg:py-10 lg:px-20">
+        <!-- Navbar -->
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost text-xl font-extrabold">Suganda-Ticket</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a class="btn"><span class="text-[#1DD100]">Bus</span><img src="images/bus-icon.jpg" alt=""></a>
+            </div>
+        </div>
+        <!-- Banner Section -->
+        <div class="hero h-full lg:h-full lg:min-h-screen rounded-2xl mt-7"
+            style="background-image: url(images/banner.png);">
+            <!-- <div class="hero-overlay bg-opacity-60"></div> -->
+            <div class="hero-content text-center text-neutral-content">
+                <div class="max-w-md mx-10">
+                    <h1 class="lg:mb-5 lg:text-4xl font-bold text-[#ffffff]">Star-to-End Travel with <br></h1>
+                    <h1><span class="text-[#1DD100] lg:text-4xl mb-5">Suganda Paribahan</span></h1>
+                    <p class="mb-5">Suganda Travel offers a plethora of opportunities for adventure seekers, culture
+                        enthusiasts, and nature lovers alike.</p>
+                    <button class="btn bg-[#1DD100] border-none">Get Started</button>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-8">
+            <div class="card border-none h-3/4 lg:h-2/3 bg-[#ffbf0f] text-neutral-content border-2">
+                <div class="card-body items-center text-center">
+                    <div class="flex">
+                        <div class="pr-16 pt-9">
+                            <h1 class="text-[#030712] text-3xl font-bold">15% OFF</h1>
+                            <p class="text-[#030712]">on your next purchase</p>
+                            <p class="text-[#030712] opacity-50">Use By March 2024</p>
+                        </div>
+                        <div> <img class=" h-3/4 lg:h-full lg:relative lg:pb-9 lg:-top-9 relative -top-8 -bottom-16"
+                                src="images/cupon-devider.png" alt=""></div>
+                        <div class="pt-12">
+                            <h1 class="text-[#030712] font-bold text-3xl opacity-80">NEW15</h1>
+                            <p class="text-[#030712] opacity-50">Coupon Code</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-none h-3/4 lg:h-2/3 bg-[#f78c9c] text-neutral-content border-2">
+                <div class="card-body items-center text-center">
+                    <div class="flex">
+                        <div class="pr-16 pt-9">
+                            <h1 class="text-[#030712] opacity-80 text-3xl font-bold">20% OFF</h1>
+                            <p class="text-[#030712]">on your next purchase</p>
+                            <p class="text-[#030712]">Use By March 2024</p>
+                        </div>
+                        <div>
+                            <img class=" h-3/4 lg:h-full lg:relative lg:pb-9 lg:-top-9 relative -top-8 -bottom-16"
+                                src="images/cupon-devider.png" alt="">
+                        </div>
+                        <div class="pt-12">
+                            <h1 class="text-[#030712] opacity-80 text-3xl font-bold">Couple 20</h1>
+                            <p class="text-[#030712] opacity-50">Coupon Code</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <button class="btn btn-outline text-[#1DD100] hover:text-white hover:bg-[#1DD100] hover:border-none">See All
+                Offers</button>
+        </div>
+    </section>
+    <!-- Section Two -->
+    <section class="bg-[#f7f8f8] rounded-t-2xl mt-10 border-solid border-2 border-r-red-600">
+        <div class="lg:flex lg:flex-col lg:justify-center lg:items-center text-center">
+            <h1 class="text-[#030712] lg:text-3xl font-bold">Suganda Paribahan</h1>
+            <p class="text-[#030712] opacity-60">Bangladesh Travel prides itself on delivering exceptional service to
+                its
+                customers,</p>
+            <p class="text-[#030712] opacity-60"> ensuring that every aspect of their travel experience is smooth</p>
+        </div>
+        <div class="mt-5 lg:relative left-32">
+            <div class="card w-full lg:w-10/12 bg-[#ffffff] text-neutral-content flex">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="card-body items-center text-center">
+                        <div class="lg:flex justify-around lg:w-full">
+                            <div class="flex justify-center items-center gap-4">
+                                <img src="images/bus-logo.png" alt="">
+                                <div class="flex flex-col justify-start items-start">
+                                    <h6 class="text-black font-bold lg:text-2xl">Suganda Paribahan</h6>
+                                    <p class="text-[#030712] opacity-60">Coach-009-WEB ! AC_Business</p>
+                                </div>
+                            </div>
+                            <div>
+                                <button
+                                    class="flex justify-center items-center gap-1 bg-[#ddf8d9] p-3 lg:mt-0 mt-8 rounded-xl"><img
+                                        src="images/seat-green.png" alt="">40 Seats left</button>
+                            </div>
+                        </div>
+                        <div class="bg-[#f7f8f8]">
+                            <div>
+                                <p>route</p>
+                                <p>Dhaka-Sylhet</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="ml-40">
+                        <img src="images/info-devider.png" alt="">
+                    </div> -->
+                    <div>
+                        <div class="flex flex-col justify-center items-center">
+                            <div>
+                                <img src="images/fare.png" alt="">
+                            </div>
+                            <h1 class="text-black text-2xl font-bold">550 Taka</h1>
+                            <p class="text-[#030712] opacity-60">Per Seat</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </section>
 </body>
+
 </html>
