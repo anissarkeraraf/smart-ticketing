@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="header-section">
         <section class="lg:py-10 lg:px-20">
             <!-- Navbar -->
             <div class="navbar bg-base-100">
@@ -56,7 +56,7 @@
                         <h1><span class="text-[#1DD100] lg:text-4xl mb-5">Suganda Paribahan</span></h1>
                         <p class="mb-5">Suganda Travel offers a plethora of opportunities for adventure seekers, culture
                             enthusiasts, and nature lovers alike.</p>
-                        <button class="btn bg-[#1DD100] border-none">Get Started</button>
+                        <button class="btn bg-[#1DD100] border-none">Get Started <a href="two-Section"></a></button>
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@
             </div>
         </section>
         <!-- Section Two -->
-        <section class="bg-[#f7f8f8] rounded-t-2xl mt-10 border-solid border-2 border-r-red-600 ">
+        <section id="two-Section" class="bg-[#f7f8f8] rounded-t-2xl mt-10">
             <div class="lg:flex lg:flex-col lg:justify-center lg:items-center text-center mt-8">
                 <h1 class="text-[#030712] lg:text-3xl font-bold">Suganda Paribahan</h1>
                 <p class="text-[#030712] opacity-60 mt-4">Bangladesh Travel prides itself on delivering exceptional
@@ -130,8 +130,9 @@
                                 </div>
                                 <div>
                                     <button
-                                        class="flex justify-center items-center gap-1 bg-[#ddf8d9] p-3 lg:mt-0 mt-8 rounded-xl"><img
-                                            src="images/seat-green.png" alt="">40 Seats left</button>
+                                        class="flex justify-center items-center gap-1 bg-[#ddf8d9] p-3 lg:mt-0 mt-8 rounded-xl text-[#1DD100]"><img
+                                            src="images/seat-green.png" alt=""><span id="booking-seat">8</span> Seats
+                                        left</button>
                                 </div>
                             </div>
                             <div class="bg-[#f7f8f8] w-full px-5 rounded-xl">
@@ -168,7 +169,7 @@
                                     <img src="images/fare.png" alt="">
                                 </div>
 
-                                <h1 class="text-black text-2xl font-bold">550 Taka</h1>
+                                <h1 class="text-black text-2xl font-bold"><span>550</span> Taka</h1>
                                 <p class="text-[#030712] opacity-60">Per Seat</p>
 
                             </div>
@@ -197,7 +198,7 @@
                                 <button class="btn btn-active"><img class="h-10" src="images/wheel.png" alt=""></button>
                             </div>
                         </div>
-                        <div class="px-4">
+                        <div id="seats" onclick="handleClick()" class="px-4">
                             <div class="grid grid-cols-5 gap-5 pt-4">
                                 <button class="text-[#030712] opacity-50">A</button>
                                 <button id="A1" class="btn">A1</button>
@@ -212,41 +213,7 @@
                                 <button id="B3" class="btn">B3</button>
                                 <button id="B4" class="btn">B4</button>
                             </div>
-                            <div class="grid grid-cols-5 gap-5 pt-4">
-                                <button class="text-[#030712] opacity-50">C</button>
-                                <button id="C1" class="btn">C1</button>
-                                <button id="C2" class="btn">C2</button>
-                                <button id="C3" class="btn">C3</button>
-                                <button id="C4" class="btn">C4</button>
-                            </div>
-                            <div class="grid grid-cols-5 gap-5 pt-4">
-                                <button class="text-[#030712] opacity-50">D</button>
-                                <button id="D1" class="btn">D1</button>
-                                <button id="D2" class="btn">D2</button>
-                                <button id="D3" class="btn">D3</button>
-                                <button id="D4" class="btn">D4</button>
-                            </div>
-                            <div class="grid grid-cols-5 gap-5 pt-4">
-                                <button class="text-[#030712] opacity-50">E</button>
-                                <button id="E" class="btn">E1</button>
-                                <button id="E2" class="btn">E2</button>
-                                <button id="E3" class="btn">E3</button>
-                                <button id="E4" class="btn">E4</button>
-                            </div>
-                            <div class="grid grid-cols-5 gap-5 pt-4">
-                                <button class="text-[#030712] opacity-50">F</button>
-                                <button id="F1" class="btn">F1</button>
-                                <button id="F2" class="btn">F2</button>
-                                <button id="F3" class="btn">F3</button>
-                                <button id="F4" class="btn">F4</button>
-                            </div>
-                            <div class="grid grid-cols-5 gap-5 pt-4">
-                                <button class="text-[#030712] opacity-50">G</button>
-                                <button id="G1" class="btn">G1</button>
-                                <button id="G2" class="btn">G2</button>
-                                <button id="G3" class="btn">G3</button>
-                                <button id="G4" class="btn">G4</button>
-                            </div>
+
                         </div>
                     </div>
                     <!-- left site of seat -->
@@ -261,29 +228,30 @@
                         <div class="pl-20 pr-20 pt-4 pb-8">
                             <div class="bg-[#ebeced] pl-4 pt-4 rounded-xl">
                                 <div class="flex justify-between text-center pr-4">
-                                    <h1>seat <span class="bg-[#1DD100] rounded-lg text-white">0</span></h1>
+                                    <h1>seat <span id="current-seat" class="bg-[#1DD100] rounded-lg text-white">0</span>
+                                    </h1>
                                     <h1>Class</h1>
                                     <h1>Price</h1>
                                 </div>
                                 <!-- Calculate Section -->
-                                <div class="pt-4">
-                                    <hr>
-                                    <ul>
 
-                                    </ul>
-                                    <hr>
-                                </div>
+                                <hr>
+                                <ul id="class-price" class="flex justify-between text-center pr-4">
+
+                                </ul>
+                                <hr>
+
                                 <div class="flex justify-between pr-4 pt-4">
                                     <p>Total Price</p>
-                                    <p>BDT 0</p>
+                                    <p>BDT <span id="perSeat">0</span></p>
                                 </div>
                                 <div class="pt-4 pr-3">
                                     <label for="hs-trailing-button-add-on-with-icon-and-button"
                                         class="sr-only">Label</label>
                                     <div class="relative flex rounded-xl shadow-sm ">
-                                        <input type="text" placeholder="Have any copupon?"
+                                        <input id="coupon-input" type="text" placeholder="Have any copupon?"
                                             class="w-full py-3 bg-[#ffffff] pl-3 rounded-xl">
-                                        <button type="button"
+                                        <button id="coupon-btn" type="button"
                                             class="bg-[#1DD100] hover:border-none p-[13px] absolute left-[344px] rounded-r-xl">Apply
                                         </button>
                                     </div>
@@ -308,8 +276,7 @@
                             class="w-9/12 ml-20 py-3 bg-[#ffffff] pl-3 rounded-xl">
 
                         <!-- Open the modal using ID.showModal() method -->
-                        <button class="btn w-9/12 ml-20 mt-5 bg-[#1DD100]"
-                            onclick="my_modal_5.showModal()">Next</button>
+                        <button class="btn w-9/12 ml-20 mt-5 bg-[#1DD100]" onclick="booking()">Next</button>
                         <div class="flex justify-around pt-4">
                             <p><u>Terms and Conditions</u></p>
                             <p><u>Cancellation Policy</u></p>
@@ -318,7 +285,7 @@
                 </div>
         </section>
     </header>
-    <section class="h-full hidden">
+    <section id="success" class="h-full hidden">
         <div class="bg-[#f2f1f1] w-[1000px] h-[550px] mx-auto mt-12 relative">
             <div>
                 <div class="bg-[#FFFFFF] w-[500px] h-[300px] absolute ml-60 mt-36 rounded-lg">
@@ -330,7 +297,8 @@
                         <div>
                             <div class="flex flex-col justify-center items-center mb-4 mt-2">
                                 <p class="text-[#030712] font-medium">Thank You for Booking our Suganda </p>
-                                <p class="text-[#030712] font-medium">Bus seat. We are working hard to reach your destination well
+                                <p class="text-[#030712] font-medium">Bus seat. We are working hard to reach your
+                                    destination well
                                 </p>
                             </div>
                             <p class="text-[#4A4A4A] text-center">You will receive confirmation code on your email</p>
@@ -345,7 +313,7 @@
         </div>
     </section>
     <!-- Footer Section -->
-    <footer class="pt-10">
+    <footer id="footer-section" class="pt-10 ">
         <footer class="footer p-10 bg-neutral text-neutral-content">
 
 
@@ -379,6 +347,8 @@
             </div>
         </footer>
     </footer>
+    <script src="js/index.js"></script>
+    <script src="js/utility.js"></script>
 </body>
 
 </html>
