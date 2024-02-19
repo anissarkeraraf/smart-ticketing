@@ -16,6 +16,10 @@ var numSelectedSeats = 0;
 
 function handleClick(event) {
 
+    // var originalPrice = parseFloat(document.getElementById('grandTotal').value);
+
+
+
 
     // update seat
 
@@ -54,12 +58,79 @@ function handleClick(event) {
         const updateSeat = seatTaxt - 1;
         currentSeatElementById.innerText = updateSeat;
 
+
+        const currentGrandTotalElement = document.getElementById('grandTotal');
+        const addCurrentGrandPerSeat = 550;
+        const grandtotalSeat = addCurrentGrandPerSeat * newSeat;
+        currentGrandTotalElement.innerText = grandtotalSeat;
+        console.log(grandtotalSeat);
+
+      
+
+
+
+
+
+
+        // coupon
+
+        const newCoupleCouponButton = document.getElementById('coupon-btn');
+
+        newCoupleCouponButton.addEventListener('click', function () {
+            let newCouplecouponInput = document.getElementById('coupon-input').value.toUpperCase();
+
+            if (newCouplecouponInput === 'NEW15') {
+                if (document.getElementById('new')) {
+                    discount1 = totalPerSeat * 0.15; // 15% discount
+                    console.log(discount1)
+
+                    grandTotal = grandtotalSeat - discount1;
+                    document.getElementById('grandTotal').innerText = grandTotal;
+                    document.getElementById('coupon-input').classList.add('hidden');
+                    newCoupleCouponButton.classList.add('hidden');
+
+                }
+
+
+
+
+
+
+            } else if (newCouplecouponInput === 'COUPLE 20') {
+                if (document.getElementById('couple')) {
+                    discount2 = totalPerSeat * 0.20; // 15% discount
+                    console.log(discount2)
+
+                    grandTotal = grandtotalSeat - discount2;
+                    document.getElementById('grandTotal').innerText = grandTotal;
+                    document.getElementById('coupon-input').classList.add('hidden');
+                    newCoupleCouponButton.classList.add('hidden');
+
+                }
+
+
+            } else {
+                alert('Invalid Your Coupon Code');
+            }
+        })
+
+
+
     } else {
         // If four seats are already selected, disable further selection
         alert('You can only select up to 4 seats.');
-       
-   
+
+
+        // Check if discount code COUPLE20 is applied
+        // if (document.getElementById('couple').checked) {
+        //     discount2 = originalPrice * 0.20; // 20% discount
     }
+
+    // grandTotal = originalPrice - discount1 - discount2;
+    // document.getElementById('grandTotal').innerHTML = "Grand Total: $" + grandTotal.toFixed(2);
+
+
+
 
     // console.log('Number of selected seats:', numSelectedSeats);
 
@@ -69,48 +140,9 @@ buttons.forEach(function (button) {
 });
 
 
-// coupon
+function scrollWin() {
+    const element = document.getElementById("two-Section");
+    element.scrollIntoView();
+  }
 
-const newCoupleCouponButton = document.getElementById('coupon-btn');
-
-newCoupleCouponButton.addEventListener('click', function(){
-    let newCouplecouponInput = document.getElementById('coupon-input').value.toUpperCase();
-
-    if(newCouplecouponInput === 'NEW15' || newCouplecouponInput === 'COUPLE 20'){
-        document.getElementById('coupon-input').classList.add('hidden');
-        newCoupleCouponButton.classList.add('hidden');
-
-    }else{
-        alert('Invalid Your Coupon Code');
-    }
-})
-
-const allBtn = document.getElementsByClassName('btn');
-
-for (const btns of allBtn){
-    btns.addEventListener('click', function(e){
-        
-        const ticketName = e.target.parentNode.innerText;
-        console.log(e.target.parentNode.innerText)
-        const classPriceContainer = document.getElementById('class-price')
-
-        const ticketPrice = 550;
-        const ticketSeat = 'Economoy';
-
-        const li = document.getElementById('li');
-        const p = document.getElementById('p');
-        p.innerText = ticketName;
-        const p2 = document.getElementById('p');
-        p2.innerText = ticketPrice;
-        const p3 = document.getElementById('p');
-        p3.innerText = ticketSeat;
-
-        li.appendChild(p);
-        li.appendChild(p2);
-        li.appendChild(p3);
-
-        classPriceContainer.appendChild(li)
-
-    })
-}
 

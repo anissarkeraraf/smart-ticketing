@@ -56,7 +56,7 @@
                         <h1><span class="text-[#1DD100] lg:text-4xl mb-5">Suganda Paribahan</span></h1>
                         <p class="mb-5">Suganda Travel offers a plethora of opportunities for adventure seekers, culture
                             enthusiasts, and nature lovers alike.</p>
-                        <button class="btn bg-[#1DD100] border-none">Get Started <a href="two-Section"></a></button>
+                        <button onclick="scrollWin()" class="btn bg-[#1DD100] border-none">Get Started <a href="two-Section"></a></button>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                             <div> <img class=" h-3/4 lg:h-full lg:relative lg:pb-9 lg:-top-9 relative -top-8 -bottom-16"
                                     src="images/cupon-devider.png" alt=""></div>
                             <div class="pt-12">
-                                <h1 class="text-[#030712] font-bold text-3xl opacity-80">NEW15</h1>
+                                <h1 id="new" class="text-[#030712] font-bold text-3xl opacity-80">NEW15</h1>
                                 <p class="text-[#030712] opacity-50">Coupon Code</p>
                             </div>
                         </div>
@@ -91,7 +91,7 @@
                                     src="images/cupon-devider.png" alt="">
                             </div>
                             <div class="pt-12">
-                                <h1 class="text-[#030712] opacity-80 text-3xl font-bold">Couple 20</h1>
+                                <h1 id="couple" class="text-[#030712] opacity-80 text-3xl font-bold">Couple 20</h1>
                                 <p class="text-[#030712] opacity-50">Coupon Code</p>
                             </div>
                         </div>
@@ -236,8 +236,8 @@
                                 <!-- Calculate Section -->
 
                                 <hr>
-                                <ul id="class-price" class="flex justify-between text-center pr-4">
-
+                                <ul id="button-container" class="flex justify-between pr-4">
+                                  
                                 </ul>
                                 <hr>
 
@@ -258,7 +258,7 @@
                                 </div>
                                 <div class="flex justify-between pr-4 pt-4 pb-4">
                                     <p>Grand Total</p>
-                                    <p>BDT 0</p>
+                                    <p>BDT <span id="grandTotal">0</span></p>
                                 </div>
                             </div>
                         </div>
@@ -271,7 +271,7 @@
                         <input type="number" placeholder="Enter Your Number"
                             class="w-9/12 ml-20 py-3 mb-5 bg-[#ffffff] pl-3 rounded-xl">
 
-                        <label class="mt-5 ml-20" for="Pname">Phone Number*</label><br><br>
+                        <label class="mt-5 ml-20" for="Pname">Email*</label><br><br>
                         <input type="email" placeholder="Enter Your Email"
                             class="w-9/12 ml-20 py-3 bg-[#ffffff] pl-3 rounded-xl">
 
